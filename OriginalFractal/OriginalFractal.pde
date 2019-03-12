@@ -8,8 +8,8 @@ void setup() {
 }
 
 void draw() {
-  background(200);
-  drawSquares(width/2, height/2, 400, angle, colorR, colorG, colorB);
+  background(150);
+  drawSquares(width/2, height/2, 500, angle, colorR, colorG, colorB);
   angle++;
 }
 void drawSquares(float x, float y, float r, float rot, float colorR, float colorG, float colorB) {
@@ -37,4 +37,10 @@ void drawTree(float x, float y, float l, float a) {
     drawTree(l, 0, 0.75*l, a - 10);
   }
   popMatrix();
+}
+
+void mousePressed(){
+  colorR = (int) random(0, 255);
+  colorG = (int) random(0, 255);
+  colorB = (int) random(0, 255);
 }
